@@ -7,6 +7,8 @@ import 'package:provider/provider.dart';
 import '../../../app_config.dart';
 import '../../../data_model/product_mini_response.dart';
 import '../../../presenter/home_provider.dart';
+import '../../product/featured_products.dart';
+import '../../product/new_products.dart';
 import 'featured_products/custom_horizontal_products_list_widget.dart';
 
 // TODO:# change to new products not featured
@@ -33,6 +35,14 @@ class NewProductsListSliver extends StatelessWidget {
             if (!s.isFeaturedProductInitial && s.featuredProductList.isEmpty)
               return emptyWidget;
             return CustomHorizontalProductsListSectionWidget(
+              onPressed: () => {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => NewProducts(),
+                ),
+              )
+            },
               title: 'new_products'.tr(context: context),
               isProductInitial: s.isFeaturedProductInitial,
               productList: s.featuredProductList,
