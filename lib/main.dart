@@ -20,10 +20,8 @@ import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:shared_value/shared_value.dart';
 import 'package:device_preview/device_preview.dart';
-
 import 'app_config.dart';
 import 'custom/aiz_route.dart';
-
 import 'custom/error_widget.dart';
 import 'data_model/address_response.dart';
 import 'data_model/business_settings/update_model.dart';
